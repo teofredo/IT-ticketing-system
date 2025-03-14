@@ -1,0 +1,78 @@
+/* tech_style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    min-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.performance-rating h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.rating-meter {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(to right, #e74c3c 0%, #2ecc71 100%);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pointer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 90px;
+    background: black;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease;
+}
+
+.rating-labels {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 10px;
+    color: #333;
+}
+
+.rating-labels span.poor {
+    color: #e74c3c;
+}
+
+.rating-labels span.excellent {
+    color: #2ecc71;
+}
